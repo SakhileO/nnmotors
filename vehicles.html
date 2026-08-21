@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Used Cars for Sale in Bloemfontein | N&N Motors</title>
+  <meta name="description"
+    content="Browse quality used cars, bakkies and SUVs for sale in Bloemfontein. Every vehicle inspected. Finance available through ABSA, WesBank, Standard Bank and Nedbank MFC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header id="site-nav">
+    <div class="nav-top">
+      <div class="container">
+        <span>67 Oliver Tambo Street, Bloemfontein</span>
+        <div class="nt-right">
+          <a href="tel:0514489580"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          <a href="contact.html">Mon–Fri 8–5 · Sat 8–1</a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="N&N Motors logo"></a>
+      <nav class="main-menu">
+        <a href="index.html">Home</a>
+        <a href="vehicles.html" style="color:var(--red);">Vehicles</a>
+        <a href="index.html#finance">Finance</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:0514489580" class="btn btn-ghost btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-header">
+      <button class="close-mm" id="closeMm" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <img src="assets/images/logo.png" alt="N&N Motors" class="mm-logo">
+      <span class="mm-spacer"></span>
+    </div>
+    <nav class="mm-nav-list">
+    <a href="vehicles.html"><i class="fa-solid fa-car"></i> Vehicles</a>
+    <a href="index.html#finance"><i class="fa-solid fa-credit-card"></i> Finance</a>
+    <a href="sell.html"><i class="fa-solid fa-hand-holding-dollar"></i> Sell Your Car</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="mm-cta">
+      <a href="tel:0514489580" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    </div>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Used Cars for Sale in Bloemfontein</span></div>
+      <h1>Used Cars for Sale in Bloemfontein</h1>
+      <p>Every vehicle inspected before it's listed. Finance available through ABSA, WesBank, Standard Bank and Nedbank
+        MFC.</p>
+    </div>
+  </section>
+
+  <!-- LISTING -->
+  <section class="section" style="padding-top:36px;">
+    <div class="container">
+
+      <div class="filters-overlay" id="filtersOverlay"></div>
+
+      <div class="mobile-filter-bar">
+        <button class="btn btn-ghost btn-block" id="filterToggleBtn"><i class="fa-solid fa-sliders"></i> Filter Vehicles</button>
+      </div>
+
+      <div class="listing-layout">
+
+        <!-- FILTERS -->
+        <aside class="filters-panel" id="filtersPanel">
+          <div class="fp-head">
+            <h3>Filter Vehicles</h3>
+            <button id="closeFilters" class="close-mm" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div style="text-align:right; margin:-10px 0 14px;">
+            <button type="button" id="clearFiltersBtn" style="font-size:.78rem; font-weight:700; color:var(--red);">Clear All</button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Make &amp; Model</h4>
+            <select id="filterMake"><option value="">Any Make</option></select>
+            <select id="filterModel"><option value="">Any Model</option></select>
+          </div>
+
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="range-row">
+              <input type="number" id="filterPriceMin" placeholder="Min" min="0" step="1000">
+              <span style="color:var(--text-soft);">–</span>
+              <input type="number" id="filterPriceMax" placeholder="Max" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Year</h4>
+            <div class="range-row">
+              <select id="filterYearFrom"><option value="">From</option></select>
+              <select id="filterYearTo"><option value="">To</option></select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Max Mileage</h4>
+            <select id="filterMaxMileage">
+              <option value="">Any Mileage</option>
+              <option value="60000">Under 60,000 km</option>
+              <option value="100000">Under 100,000 km</option>
+              <option value="150000">Under 150,000 km</option>
+              <option value="200000">Under 200,000 km</option>
+              <option value="300000">Under 300,000 km</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <h4>Body Type</h4>
+            <div class="chip-group">
+              <button type="button" class="chip-toggle" data-group="body">Sedan</button>
+              <button type="button" class="chip-toggle" data-group="body">Hatchback</button>
+              <button type="button" class="chip-toggle" data-group="body">SUV</button>
+              <button type="button" class="chip-toggle" data-group="body">Bakkie</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Transmission</h4>
+            <div class="chip-group">
+              <button type="button" class="chip-toggle" data-group="trans">Manual</button>
+              <button type="button" class="chip-toggle" data-group="trans">Automatic</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Fuel Type</h4>
+            <div class="chip-group">
+              <button type="button" class="chip-toggle" data-group="fuel">Petrol</button>
+              <button type="button" class="chip-toggle" data-group="fuel">Diesel</button>
+              <button type="button" class="chip-toggle" data-group="fuel">Hybrid</button>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block" id="applyFiltersBtn">Apply Filters</button>
+        </aside>
+
+        <!-- RESULTS -->
+        <div>
+          <div class="toolbar reveal visible">
+            <div class="count"><span id="resultsCount">12</span> vehicles found</div>
+            <div class="sort">
+              <label style="color:var(--text-soft); font-size:.82rem;">Sort by</label>
+              <select id="sortSelect">
+                <option value="newest">Newest listed</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="mileage-asc">Lowest Mileage</option>
+              </select>
+              <div class="view-toggle"><button class="active" id="viewGridBtn" aria-label="Grid view"><i class="fa-solid fa-table-cells"></i></button><button id="viewListBtn"
+                  aria-label="List view"><i class="fa-solid fa-list"></i></button></div>
+            </div>
+          </div>
+
+          <div class="vehicle-grid stagger" id="vehicleGrid"></div>
+          <p class="no-results" id="noResults" style="display:none;">No vehicles match those filters — try widening your search or <button type="button" id="noResultsClear" style="color:var(--red); font-weight:700; text-decoration:underline;">clear all filters</button>.</p>
+
+          <div class="pagination reveal visible" id="paginationControls"></div>
+        </div>
+      </div>
+
+      <div class="cta-banner reveal visible">
+        <div>
+          <h3>Can't find what you're looking for?</h3>
+          <p>Tell us what you need and we'll help you find it — or let us know if you'd like to trade in your current
+            car.</p>
+        </div>
+        <div class="actions">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="sell.html" class="btn btn-outline"
+            style="background:#fff; color:var(--navy); border:1.5px solid var(--border);">Sell Your Car</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"
+          style="margin-bottom:14px; padding:10px 16px; border-radius:8px; display:inline-flex; width:fit-content;"><img
+            src="assets/images/logo.png" alt="N&N Motors logo" style="height:38px;"></div>
+        <p>Quality used vehicles you can trust. Serving Bloemfontein for over 10 years.</p>
+        <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a
+            href="https://wa.me/27824990717" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+      <div>
+        <h4>Popular Makes</h4>
+        <ul>
+          <li><a href="vehicles.html?make=Toyota">Toyota</a></li>
+          <li><a href="vehicles.html?make=Volkswagen">Volkswagen</a></li>
+          <li><a href="vehicles.html?make=Ford">Ford</a></li>
+          <li><a href="vehicles.html?make=Hyundai">Hyundai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Models</h4>
+        <ul>
+          <li><a href="vehicles.html">Corolla Quest</a></li>
+          <li><a href="vehicles.html">Polo TSI</a></li>
+          <li><a href="vehicles.html">Ranger 2.2</a></li>
+          <li><a href="vehicles.html">Grand i10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#finance">Finance</a></li>
+          <li><a href="sell.html">Sell Your Car</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business Information</h4>
+        <p>67 Oliver Tambo Street<br>Bloemfontein, South Africa<br>051 448 9580<br>info@nnmotors.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 N&amp;N Motors. All Rights Reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/27824990717" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <div class="sticky-cta-mobile">
+    <a href="tel:0514489580" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <a href="index.html#finance" class="btn btn-primary btn-block">Get Finance</a>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/vehicles-data.js"></script>
+  <script>
+    setupVehicleListing('vehicleGrid', 'paginationControls', VEHICLES, 9);
+  </script>
+</body>
+
+</html>

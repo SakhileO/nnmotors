@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | N&N Motors Bloemfontein</title>
+  <meta name="description"
+    content="Get in touch with N&N Motors Bloemfontein — call 051 448 9580, visit us at 67 Oliver Tambo Street, or send a message. We're happy to help with vehicles, finance and trade-ins.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header id="site-nav">
+    <div class="nav-top">
+      <div class="container">
+        <span>67 Oliver Tambo Street, Bloemfontein</span>
+        <div class="nt-right">
+          <a href="tel:0514489580"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          <a href="contact.html">Mon–Fri 8–5 · Sat 8–1</a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="N&N Motors logo"></a>
+      <nav class="main-menu">
+        <a href="index.html">Home</a>
+        <a href="vehicles.html">Vehicles</a>
+        <a href="index.html#finance">Finance</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" style="color:var(--red);">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:0514489580" class="btn btn-ghost btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-header">
+      <button class="close-mm" id="closeMm" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <img src="assets/images/logo.png" alt="N&N Motors" class="mm-logo">
+      <span class="mm-spacer"></span>
+    </div>
+    <nav class="mm-nav-list">
+      <a href="vehicles.html"><i class="fa-solid fa-car"></i> Vehicles</a>
+      <a href="index.html#finance"><i class="fa-solid fa-credit-card"></i> Finance</a>
+      <a href="sell.html"><i class="fa-solid fa-hand-holding-dollar"></i> Sell Your Car</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="mm-cta">
+      <a href="tel:0514489580" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    </div>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Contact Us</span></div>
+      <h1>Get In Touch</h1>
+      <p>Visit us, call us, or send a message — our team is happy to help, no pressure attached.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="reveal visible">
+          <div class="map-frame"><iframe
+              src="https://www.google.com/maps?q=67+Oliver+Tambo+Street,+Bloemfontein,+South+Africa&output=embed"
+              loading="lazy" title="N&N Motors location"></iframe></div>
+          <div class="contact-info-card" style="margin-top:16px;">
+            <h4>Contact Details</h4>
+            <div class="row"><span class="ic"><i class="fa-solid fa-location-dot"></i></span> 67 Oliver Tambo Street,
+              Bloemfontein, South Africa</div>
+            <div class="row"><span class="ic"><i class="fa-solid fa-phone"></i></span> <a href="tel:0514489580">051 448
+                9580</a></div>
+            <div class="row"><span class="ic"><i class="fa-solid fa-envelope"></i></span> <a
+                href="mailto:info@nnmotors.co.za">info@nnmotors.co.za</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <h4>Opening Hours</h4>
+            <div class="hours-table">
+              <div><span>Monday – Friday</span><span>8:00 AM – 5:00 PM</span></div>
+              <div><span>Saturday</span><span>8:00 AM – 1:00 PM</span></div>
+              <div><span>Sunday</span><span>Closed</span></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <h4>Follow &amp; Chat</h4>
+            <div class="footer-social" style="margin-top:2px;">
+              <a href="#" aria-label="Facebook" style="background:var(--surface); color:var(--navy);"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram" style="background:var(--surface); color:var(--navy);"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://wa.me/27824990717" target="_blank" aria-label="WhatsApp"
+                style="background:var(--surface); color:var(--navy);"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal visible"
+          onsubmit="handleFormSubmit(event,'Thanks for reaching out — we\'ll get back to you soon.')">
+          <div class="form-grid">
+            <div class="form-field"><label>Name</label><input type="text" required></div>
+            <div class="form-field"><label>Phone</label><input type="tel" required></div>
+            <div class="form-field full"><label>Email</label><input type="email" required></div>
+            <div class="form-field full"><label>Subject</label>
+              <select>
+                <option>General Enquiry</option>
+                <option>Vehicle Enquiry</option>
+                <option>Finance Application</option>
+                <option>Sell / Trade-in My Car</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field full"><label>Message</label><textarea rows="5" required></textarea></div>
+          </div>
+          <button class="btn btn-primary btn-block" style="margin-top:18px;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO TO CONTACT -->
+  <section class="section" style="background:var(--surface); padding-top:0;">
+    <div class="container">
+      <div class="section-head reveal visible">
+        <div>
+          <div class="eyebrow">Speak to someone directly</div>
+          <h2>Who to Contact</h2>
+        </div>
+      </div>
+      <div class="contact-people">
+        <div class="contact-person reveal visible">
+          <img src="assets/images/team/meet-the-team-01.jpg" alt="Mariette Dicks">
+          <div>
+            <h4>Mariette Dicks</h4>
+            <div class="role">Vehicle Enquiries &amp; Sales</div>
+            <a href="tel:0514489580" class="callink"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          </div>
+        </div>
+        <div class="contact-person reveal visible">
+          <img src="assets/images/team/meet-the-team-02.jpg" alt="Gerald Strauss">
+          <div>
+            <h4>Gerald Strauss</h4>
+            <div class="role">Trade-ins &amp; Finance</div>
+            <a href="tel:0514489580" class="callink"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal visible">
+        <div>
+          <div class="eyebrow">Frequently asked</div>
+          <h2>Common Questions</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal visible" open>
+          <summary>Do you offer finance on your vehicles?</summary>
+          <div class="faq-a">Yes — we arrange finance through ABSA, WesBank, Standard Bank and Nedbank MFC, and can
+            usually get pre-approval within 24 hours. Use the calculator on our <a href="index.html#finance">Finance
+              section</a> to get an idea of monthly repayments.</div>
+        </details>
+        <details class="faq-item reveal visible">
+          <summary>Can I trade in my current car?</summary>
+          <div class="faq-a">Absolutely. Bring your vehicle in for a no-obligation valuation, or start the process
+            online via our <a href="index.html#sell">Sell Your Car</a> page. Most trade-ins are valued the same day.
+          </div>
+        </details>
+        <details class="faq-item reveal visible">
+          <summary>Do you assist customers outside Bloemfontein?</summary>
+          <div class="faq-a">Yes, we help buyers from across South Africa — we can arrange delivery or transport for
+            out-of-town customers, just call us to discuss the details.</div>
+        </details>
+        <details class="faq-item reveal visible">
+          <summary>Are your vehicles inspected before sale?</summary>
+          <div class="faq-a">Every vehicle on our floor is checked over before it's listed, so you can buy with
+            confidence.</div>
+        </details>
+        <details class="faq-item reveal visible">
+          <summary>What are your opening hours?</summary>
+          <div class="faq-a">We're open Monday to Friday from 8:00 AM to 5:00 PM, and Saturday from 8:00 AM to 1:00 PM.
+            We're closed on Sundays.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="cta-banner reveal visible">
+        <div>
+          <h3>Prefer to just browse first?</h3>
+          <p>Have a look through our current stock, or let us know what you're after and we'll help you find it.</p>
+        </div>
+        <div class="actions">
+          <a href="vehicles.html" class="btn btn-primary">Browse Vehicles</a>
+          <a href="index.html#sell" class="btn btn-outline"
+            style="background:#fff; color:var(--navy); border:1.5px solid var(--border);">Sell Your Car</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"
+          style="margin-bottom:14px; padding:10px 16px; border-radius:8px; display:inline-flex; width:fit-content;">
+          <img src="assets/images/logo.png" alt="N&N Motors logo" style="height:38px;">
+        </div>
+        <p>Quality used vehicles you can trust. Serving Bloemfontein for over 10 years.</p>
+        <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a
+            href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a
+            href="https://wa.me/27824990717" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+      <div>
+        <h4>Popular Makes</h4>
+        <ul>
+          <li><a href="vehicles.html?make=Toyota">Toyota</a></li>
+          <li><a href="vehicles.html?make=Volkswagen">Volkswagen</a></li>
+          <li><a href="vehicles.html?make=Ford">Ford</a></li>
+          <li><a href="vehicles.html?make=Hyundai">Hyundai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Models</h4>
+        <ul>
+          <li><a href="vehicles.html">Corolla Quest</a></li>
+          <li><a href="vehicles.html">Polo TSI</a></li>
+          <li><a href="vehicles.html">Ranger 2.2</a></li>
+          <li><a href="vehicles.html">Grand i10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#finance">Finance</a></li>
+          <li><a href="index.html#sell">Sell Your Car</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business Information</h4>
+        <p>67 Oliver Tambo Street<br>Bloemfontein, South Africa<br>051 448 9580<br>info@nnmotors.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 N&amp;N Motors. All Rights Reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/27824990717" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank"><i
+      class="fa-brands fa-whatsapp"></i></a>
+  <div class="sticky-cta-mobile">
+    <a href="tel:0514489580" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <a href="index.html#finance" class="btn btn-primary btn-block">Get Finance</a>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

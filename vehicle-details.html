@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Vehicle Details | N&N Motors Bloemfontein</title>
+  <meta name="description" id="pageDesc"
+    content="View full details, specs and pricing for this vehicle at N&N Motors Bloemfontein.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header id="site-nav">
+    <div class="nav-top">
+      <div class="container">
+        <span>67 Oliver Tambo Street, Bloemfontein</span>
+        <div class="nt-right">
+          <a href="tel:0514489580"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          <a href="contact.html">Mon–Fri 8–5 · Sat 8–1</a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="N&N Motors logo"></a>
+      <nav class="main-menu">
+        <a href="vehicles.html" style="color:var(--red);">Vehicles</a>
+        <a href="index.html#finance">Finance</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:0514489580" class="btn btn-ghost btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-header">
+      <button class="close-mm" id="closeMm" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <img src="assets/images/logo.png" alt="N&N Motors" class="mm-logo">
+      <span class="mm-spacer"></span>
+    </div>
+    <nav class="mm-nav-list">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="vehicles.html"><i class="fa-solid fa-car"></i> Vehicles</a>
+      <a href="index.html#finance"><i class="fa-solid fa-credit-card"></i> Finance</a>
+      <a href="sell.html"><i class="fa-solid fa-hand-holding-dollar"></i> Sell Your Car</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="mm-cta">
+      <a href="tel:0514489580" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    </div>
+  </div>
+
+  <!-- LISTING UTILITY BAR -->
+  <div class="listing-bar">
+    <div class="container">
+      <a href="vehicles.html"><i class="fa-solid fa-chevron-left"></i> Back to Listings</a>
+      <div class="lb-title" id="lbTitle">Vehicle Details</div>
+      <div class="lb-links">
+        <a href="#" id="sendFriendLink">Send to a Friend</a><span>·</span>
+        <a href="contact.html">Contact Us</a><span>·</span>
+        <a href="#" id="printLink">Printable Page</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:20px;"><a href="index.html">Home</a> / <a
+          href="vehicles.html">Vehicles</a> / <span id="breadcrumbTitle">Vehicle</span></div>
+
+      <div class="vd-layout">
+
+        <!-- GALLERY + DETAILS -->
+        <div class="vd-gallery reveal visible">
+          <div class="main-photo">
+            <img id="mainPhoto" src="" alt="">
+            <div class="photo-count" id="photoCountBadge">1 Photo</div>
+          </div>
+          <div class="vd-thumbs" id="thumbStrip"></div>
+          <div class="vd-gallery-caption">Click the thumbnails above to view larger images.</div>
+
+          <div class="vd-description reveal visible">
+            <h3>Description</h3>
+            <p id="vdDescription">Loading vehicle details…</p>
+          </div>
+
+          <div class="vd-features reveal visible">
+            <h3>Features</h3>
+            <div class="feature-chips" id="featureChips"></div>
+          </div>
+
+          <!-- FINANCE CALCULATOR -->
+          <div class="finance-card reveal visible" style="margin-top:36px;">
+            <h3 style="font-family:'Poppins',sans-serif; margin-bottom:18px; font-size:1.05rem;">Estimate Your Monthly
+              Repayment</h3>
+            <div class="calc-field"><label>Vehicle Price <b id="priceOut">R250,000</b></label><input type="range"
+                id="calcPrice" min="50000" max="1000000" step="5000" value="250000"></div>
+            <div class="calc-field"><label>Deposit <b id="depositOut">R25,000</b></label><input type="range"
+                id="calcDeposit" min="0" max="500000" step="5000" value="25000"></div>
+            <div class="calc-field"><label>Interest Rate <b id="rateOut">12.5%</b></label><input type="range"
+                id="calcRate" min="8" max="22" step="0.5" value="12.5"></div>
+            <div class="calc-field"><label>Term <b id="termOut">60 months</b></label><input type="range" id="calcTerm"
+                min="12" max="72" step="6" value="60"></div>
+            <div class="calc-result">
+              <div class="amount" id="calcResult">R4,980<span style="font-size:.95rem;">/mo</span></div>
+              <div class="note">Estimate only — final rate subject to bank approval</div>
+            </div>
+            <a href="#" id="applyFinanceLink" class="btn btn-navy btn-block">Apply for This Vehicle</a>
+          </div>
+        </div>
+
+        <!-- INFO PANEL -->
+        <aside class="vd-info-card reveal visible">
+          <div class="vd-info-head" id="vdInfoHead">2021 Toyota Corolla Quest</div>
+          <div class="vd-info-body">
+            <div class="vd-row"><span class="k">Location:</span><span class="v">N&amp;N Motors</span></div>
+            <div class="vd-row"><span class="k">Availability:</span><span class="v" id="vdAvailability">Available</span>
+            </div>
+            <div class="vd-row"><span class="k">Condition:</span><span class="v" id="vdCondition">Pre-Owned</span></div>
+            <div class="vd-row"><span class="k">Kilometres:</span><span class="v" id="vdKm">–</span></div>
+            <div class="vd-row"><span class="k">Price:</span><span class="v strike" id="vdPrice">–</span></div>
+            <div class="vd-row"><span class="k">Sale Price:</span><span class="v sale-badge" id="vdSalePrice">–</span>
+            </div>
+
+            <div class="vd-divider"></div>
+            <div class="vd-row"><span class="k">Salesperson:</span><span class="v" id="vdSalesperson">–</span></div>
+            <div class="vd-row"><span class="k">Email:</span><span class="v"><a href="#" id="vdEmailLink">Email
+                  Salesperson</a></span></div>
+            <div class="vd-row"><span class="k">Phone:</span><span class="v"><a href="tel:0514489580"
+                  id="vdPhone">–</a></span></div>
+
+            <div class="vd-divider"></div>
+            <div class="vd-row"><span class="k">Exterior Color:</span><span class="v" id="vdColor">–</span></div>
+            <div class="vd-row"><span class="k">Doors:</span><span class="v" id="vdDoors">–</span></div>
+            <div class="vd-row"><span class="k">Fuel Type:</span><span class="v" id="vdFuel">–</span></div>
+            <div class="vd-row"><span class="k">Engine:</span><span class="v" id="vdEngine">–</span></div>
+            <div class="vd-row"><span class="k">Transmission:</span><span class="v" id="vdTrans">–</span></div>
+
+            <div class="vd-actions">
+              <a href="tel:0514489580" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call About
+                This Vehicle</a>
+              <a href="#" id="enquireBtn" class="btn btn-navy btn-block"><i class="fa-solid fa-envelope"></i> Enquire
+                About This Vehicle</a>
+              <a href="https://wa.me/27824990717" id="whatsappEnquire" target="_blank" class="btn btn-ghost btn-block"><i
+                  class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry</a>
+              <a href="#" id="testDriveLink" target="_blank" class="btn btn-outline btn-block"
+                style="background:#fff; color:var(--navy); border:1.5px solid var(--border);"><i
+                  class="fa-solid fa-calendar-check"></i> Book a Test Drive</a>
+            </div>
+            <div class="vd-pm-note">Est. <b id="vdPm">–</b>/month on finance — see calculator</div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- RELATED VEHICLES -->
+      <div class="related-heading">
+        <div class="section-head reveal visible">
+          <div>
+            <div class="eyebrow">You might also like</div>
+            <h2>Related Vehicles</h2>
+          </div>
+        </div>
+        <div class="vehicle-grid stagger" id="relatedGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"
+          style="margin-bottom:14px; padding:10px 16px; border-radius:8px; display:inline-flex; width:fit-content;"><img
+            src="assets/images/logo.png" alt="N&N Motors logo" style="height:38px;"></div>
+        <p>Quality used vehicles you can trust. Serving Bloemfontein for over 10 years.</p>
+        <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a
+            href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/27824990717"
+            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+      <div>
+        <h4>Popular Makes</h4>
+        <ul>
+          <li><a href="vehicles.html?make=Toyota">Toyota</a></li>
+          <li><a href="vehicles.html?make=Volkswagen">Volkswagen</a></li>
+          <li><a href="vehicles.html?make=Ford">Ford</a></li>
+          <li><a href="vehicles.html?make=Hyundai">Hyundai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Models</h4>
+        <ul>
+          <li><a href="vehicles.html">Corolla Quest</a></li>
+          <li><a href="vehicles.html">Polo TSI</a></li>
+          <li><a href="vehicles.html">Ranger 2.2</a></li>
+          <li><a href="vehicles.html">Grand i10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#finance">Finance</a></li>
+          <li><a href="sell.html">Sell Your Car</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business Information</h4>
+        <p>67 Oliver Tambo Street<br>Bloemfontein, South Africa<br>051 448 9580<br>info@nnmotors.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 N&amp;N Motors. All Rights Reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/27824990717" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank"><i
+      class="fa-brands fa-whatsapp"></i></a>
+  <div class="sticky-cta-mobile">
+    <a href="tel:0514489580" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <a href="index.html#finance" class="btn btn-primary btn-block">Get Finance</a>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/vehicles-data.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || '1';
+      const v = getVehicleById(id) || VEHICLES[0];
+      const title = `${v.year} ${v.make} ${v.model}${v.trim ? ' ' + v.trim : ''}`;
+
+      document.getElementById('pageTitle').textContent = title + ' | N&N Motors Bloemfontein';
+      document.getElementById('pageDesc').setAttribute('content', `${title} for sale at N&N Motors Bloemfontein — ${v.km} km, ${v.trans}, ${v.fuel}. Sale price ${v.salePrice}.`);
+      document.getElementById('lbTitle').textContent = title;
+      document.getElementById('breadcrumbTitle').textContent = title;
+      document.getElementById('vdInfoHead').textContent = title;
+
+      const gallery = getVehicleGallery(v); // this vehicle's own real photo(s) only
+      const TOTAL_SLOTS = 4; // gallery aims to show this many thumbnails; empty ones become "add photo" placeholders
+      const mainPhoto = document.getElementById('mainPhoto');
+      mainPhoto.src = gallery[0];
+      mainPhoto.alt = title;
+      document.getElementById('photoCountBadge').textContent = gallery.length + (gallery.length === 1 ? ' Photo' : ' Photos');
+
+      const thumbStrip = document.getElementById('thumbStrip');
+      gallery.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = title + ' photo ' + (i + 1);
+        if (i === 0) img.classList.add('active');
+        img.addEventListener('click', () => {
+          mainPhoto.src = src;
+          thumbStrip.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+          img.classList.add('active');
+        });
+        thumbStrip.appendChild(img);
+      });
+      // Fill any remaining slots with clearly-marked "add photo" placeholders —
+      // never with unrelated stock images, so buyers never mistake a filler photo for the actual car.
+      for (let i = gallery.length; i < TOTAL_SLOTS; i++) {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'vd-thumb-placeholder';
+        placeholder.title = 'More photos coming soon';
+        placeholder.innerHTML = '<i class="fa-solid fa-camera"></i><span>Add Photo</span>';
+        placeholder.addEventListener('click', () => showToast('More photos of this vehicle coming soon — contact us for extra angles.'));
+        thumbStrip.appendChild(placeholder);
+      }
+
+      document.getElementById('vdDescription').textContent = v.description;
+      const chips = document.getElementById('featureChips');
+      (v.features || []).forEach(f => {
+        const span = document.createElement('span');
+        span.textContent = f;
+        chips.appendChild(span);
+      });
+
+      document.getElementById('vdAvailability').textContent = v.availability;
+      document.getElementById('vdCondition').textContent = v.condition;
+      document.getElementById('vdKm').textContent = v.km + ' Kilometres';
+      document.getElementById('vdPrice').textContent = v.price;
+      document.getElementById('vdSalePrice').textContent = v.salePrice;
+      document.getElementById('vdSalesperson').textContent = v.salesperson.name;
+      document.getElementById('vdEmailLink').href = 'mailto:' + v.salesperson.email;
+      document.getElementById('vdPhone').textContent = v.salesperson.phone;
+      document.getElementById('vdColor').textContent = v.color;
+      document.getElementById('vdDoors').textContent = v.doors;
+      document.getElementById('vdFuel').textContent = v.fuel;
+      document.getElementById('vdEngine').textContent = v.engine;
+      document.getElementById('vdTrans').textContent = v.trans;
+      document.getElementById('vdPm').textContent = v.pm;
+
+      document.getElementById('sendFriendLink').href = `mailto:?subject=${encodeURIComponent('Check out this ' + title)}&body=${encodeURIComponent('I thought you might like this vehicle at N&N Motors: ' + title + ' — ' + v.salePrice + '. ' + window.location.href)}`;
+      document.getElementById('printLink').addEventListener('click', (e) => {e.preventDefault(); window.print();});
+      document.getElementById('enquireBtn').addEventListener('click', (e) => {e.preventDefault(); openEnquireModal(v.id);});
+      document.getElementById('whatsappEnquire').href = `https://wa.me/27824990717?text=${encodeURIComponent("Hi, I'm interested in the " + title + " (" + v.salePrice + "). Is it still available?")}`;
+      document.getElementById('testDriveLink').href = `https://wa.me/27824990717?text=${encodeURIComponent("Hi, I'd like to book a test drive for the " + title + ".")}`;
+      document.getElementById('applyFinanceLink').href = `https://wa.me/27824990717?text=${encodeURIComponent("Hi, I'd like to apply for finance on the " + title + " (" + v.salePrice + ").")}`;
+
+      /* Prefill finance calculator with this vehicle's price */
+      const priceNum = parseInt(String(v.salePrice).replace(/[^0-9]/g, ''), 10);
+      const priceSlider = document.getElementById('calcPrice');
+      if (priceSlider && !isNaN(priceNum)) {
+        const clamped = Math.min(Math.max(priceNum, parseInt(priceSlider.min)), parseInt(priceSlider.max));
+        priceSlider.value = clamped;
+        priceSlider.dispatchEvent(new Event('input'));
+      }
+
+      /* Related vehicles: same make first, then fill with others, excluding current */
+      const others = VEHICLES.filter(x => x.id !== v.id);
+      const sameMake = others.filter(x => x.make === v.make);
+      const rest = others.filter(x => x.make !== v.make);
+      const related = sameMake.concat(rest).slice(0, 3);
+      renderVehicleGrid('relatedGrid', related);
+    })();
+  </script>
+</body>
+
+</html>

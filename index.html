@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N&N Motors Bloemfontein | Quality Used Vehicles You Can Trust</title>
+  <meta name="description"
+    content="N&N Motors Bloemfontein — search quality pre-owned vehicles, get pre-approved finance and sell your car. Trusted in Bloemfontein for over 10 years.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header id="site-nav">
+    <div class="nav-top">
+      <div class="container">
+        <span>67 Oliver Tambo Street, Bloemfontein</span>
+        <div class="nt-right">
+          <a href="tel:0514489580"><i class="fa-solid fa-phone"></i> 051 448 9580</a>
+          <a href="contact.html">Mon–Fri 8–5 · Sat 8–1</a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-inner">
+      <a href="#home" class="logo"><img src="assets/images/logo.png" alt="N&N Motors logo"></a>
+      <nav class="main-menu">
+        <a href="vehicles.html">Vehicles</a>
+        <a href="#finance">Finance</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:0514489580" class="btn btn-ghost btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-header">
+      <button class="close-mm" id="closeMm" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <img src="assets/images/logo.png" alt="N&N Motors" class="mm-logo">
+      <span class="mm-spacer"></span>
+    </div>
+    <nav class="mm-nav-list">
+    <a href="vehicles.html"><i class="fa-solid fa-car"></i> Vehicles</a>
+    <a href="#finance"><i class="fa-solid fa-credit-card"></i> Finance</a>
+    <a href="sell.html"><i class="fa-solid fa-hand-holding-dollar"></i> Sell Your Car</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="mm-cta">
+      <a href="tel:0514489580" class="btn btn-primary btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-tag reveal visible"><span class="dot"></span> Serving Bloemfontein for over 10 years</div>
+      <h1 class="reveal visible">Find Your Perfect Vehicle Today</h1>
+      <p class="sub reveal visible"><strong>Quality pre-owned vehicles.</strong> Affordable finance. Trusted service —
+        from a team Bloemfontein has relied on for over a decade.</p>
+      <div class="hero-cta reveal visible">
+        <a href="vehicles.html" class="btn btn-primary">Browse Vehicles</a>
+        <a href="#finance" class="btn btn-outline"
+          style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);">Apply for Finance</a>
+      </div>
+      <div class="hero-stats reveal visible">
+        <div class="stat">
+          <div class="num" data-count="10" data-suffix="+">0</div>
+          <div class="label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count="1000" data-suffix="+">0</div>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="stat">
+          <div class="num"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="label">Quality Checked</div>
+        </div>
+        <div class="stat">
+          <div class="num"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="label">Finance Available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH DOCK (floats over hero) -->
+  <div class="container search-wrap">
+    <div class="search-dock reveal visible">
+      <div class="dock-tabs">
+        <button class="dock-tab active" data-tab="buy"><i class="fa-solid fa-magnifying-glass"></i> Buy a Car</button>
+        <button class="dock-tab" data-tab="finance"><i class="fa-solid fa-credit-card"></i> Get Finance</button>
+        <button class="dock-tab" data-tab="sell"><i class="fa-solid fa-car"></i> Sell / Trade-in</button>
+      </div>
+      <div class="dock-panel active" data-panel="buy">
+        <form class="search-grid" id="heroSearchForm">
+          <div class="field"><label>Make</label><select id="heroMake">
+              <option value="">Any Make</option>
+            </select></div>
+          <div class="field"><label>Model</label><select id="heroModel">
+              <option value="">Any Model</option>
+            </select></div>
+          <div class="field"><label>Body Type</label><select id="heroBodyType">
+              <option value="">Any Type</option>
+              <option>Sedan</option>
+              <option>Hatchback</option>
+              <option>SUV</option>
+              <option>Bakkie</option>
+            </select></div>
+          <div class="field"><label>Transmission</label><select id="heroTrans">
+              <option value="">Any</option>
+              <option>Manual</option>
+              <option>Automatic</option>
+            </select></div>
+          <div class="field"><label>Max Price</label><input type="text" id="heroMaxPrice" placeholder="e.g. R250,000"></div>
+          <div class="search-actions"><button class="search-btn" type="submit">Search Vehicles</button></div>
+        </form>
+      </div>
+      <div class="dock-panel" data-panel="finance">
+        <div class="sell-panel-copy">
+          <p>Get pre-approved through ABSA, WesBank, Standard Bank or Nedbank MFC — often within 24 hours, no
+            obligation.</p>
+          <a href="#finance" class="btn btn-primary">Go to Finance Calculator</a>
+        </div>
+      </div>
+      <div class="dock-panel" data-panel="sell">
+        <div class="sell-panel-copy">
+          <p>Trade in or sell your current vehicle — get a fair, no-obligation valuation, often the same day.</p>
+          <a href="sell.html" class="btn btn-primary">Sell Your Car</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPULAR MAKES -->
+  <div class="makes-strip">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:16px;">
+        <h2 style="font-size:1.05rem;">Popular Makes</h2>
+      </div>
+      <div class="makes-row">
+        <a class="make-chip" href="vehicles.html?make=Toyota"><span class="ic"><i class="fa-solid fa-car-side"></i></span><span
+            class="nm">Toyota</span></a>
+        <a class="make-chip" href="vehicles.html?make=Volkswagen"><span class="ic"><i class="fa-solid fa-car"></i></span><span
+            class="nm">Volkswagen</span></a>
+        <a class="make-chip" href="vehicles.html?make=Ford"><span class="ic"><i class="fa-solid fa-truck-pickup"></i></span><span class="nm">Ford</span></a>
+        <a class="make-chip" href="vehicles.html?make=Hyundai"><span class="ic"><i class="fa-solid fa-car-rear"></i></span><span
+            class="nm">Hyundai</span></a>
+        <a class="make-chip" href="vehicles.html?make=Renault"><span class="ic"><i class="fa-solid fa-car-side"></i></span><span
+            class="nm">Renault</span></a>
+        <a class="make-chip" href="vehicles.html?make=Suzuki"><span class="ic"><i class="fa-solid fa-van-shuttle"></i></span><span
+            class="nm">Suzuki</span></a>
+        <a class="make-chip" href="vehicles.html?make=Nissan"><span class="ic"><i class="fa-solid fa-car-side"></i></span><span
+            class="nm">Nissan</span></a>
+        <a class="make-chip" href="vehicles.html?make=Kia"><span class="ic"><i class="fa-solid fa-car"></i></span><span class="nm">Kia</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED VEHICLES -->
+  <section class="section" id="vehicles">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">In stock now</div>
+          <h2>Featured Vehicles</h2>
+          <p>Hand-picked from our current stock — every vehicle inspected before it's listed.</p>
+        </div>
+        <a href="vehicles.html" class="link-more">View all stock <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="toolbar reveal" style="justify-content:flex-end;">
+        <div class="sort">
+          <label style="color:var(--text-soft); font-size:.82rem;">Sort by</label>
+          <select id="sortSelect">
+            <option value="newest">Newest listed</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="mileage-asc">Lowest Mileage</option>
+          </select>
+          <div class="view-toggle"><button class="active" id="viewGridBtn" aria-label="Grid view"><i class="fa-solid fa-table-cells"></i></button><button
+              id="viewListBtn" aria-label="List view"><i class="fa-solid fa-list"></i></button></div>
+        </div>
+      </div>
+      <div class="vehicle-grid stagger" id="vehicleGrid"></div>
+      <div class="view-more-wrap reveal"><a href="vehicles.html" class="btn btn-navy">View All Vehicles</a></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Why N&amp;N Motors</div>
+          <h2>Why Buyers Choose Us</h2>
+        </div>
+      </div>
+      <div class="why-grid stagger">
+        <div class="why-card reveal" style="--i:0">
+          <div class="ic"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Quality Inspected Vehicles</h3>
+          <p>Every vehicle is checked over before it's listed for sale.</p>
+        </div>
+        <div class="why-card reveal" style="--i:1">
+          <div class="ic"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Trusted Dealer</h3>
+          <p>Over 10 years serving Bloemfontein with honest, transparent deals.</p>
+        </div>
+        <div class="why-card reveal" style="--i:2">
+          <div class="ic"><i class="fa-solid fa-rotate"></i></div>
+          <h3>Vehicle Trade-ins</h3>
+          <p>Trade in your current car towards your next one, hassle-free.</p>
+        </div>
+        <div class="why-card reveal" style="--i:3">
+          <div class="ic"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Quick Finance Approval</h3>
+          <p>Fast turnaround through South Africa's leading banks.</p>
+        </div>
+        <div class="why-card reveal" style="--i:4">
+          <div class="ic"><i class="fa-regular fa-face-smile"></i></div>
+          <h3>Friendly Sales Team</h3>
+          <p>No pressure, just honest advice to help you choose right.</p>
+        </div>
+        <div class="why-card reveal" style="--i:5">
+          <div class="ic"><i class="fa-solid fa-truck"></i></div>
+          <h3>Nationwide Assistance</h3>
+          <p>We help buyers across South Africa, not just Bloemfontein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYING ADVICE / NEWS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Buying &amp; selling advice</div>
+          <h2>Car News &amp; Advice</h2>
+        </div>
+      </div>
+      <div class="news-grid stagger">
+        <div class="news-card reveal" style="--i:0" onclick="openInfoModal('buyers-guide')" role="button" tabindex="0"
+          onkeydown="if(event.key==='Enter') openInfoModal('buyers-guide')">
+          <div class="img-wrap"><img
+              src="assets/images/Buyer's Guide.png"
+              alt="Buyer's guide"></div>
+          <div class="body">
+            <div class="cat">Buyer's Guide</div>
+            <h4>What to Check Before Buying a Used Car</h4>
+            <p>Our quick checklist for inspecting mileage, service history and condition.</p>
+            <span class="read-more">Read the full guide &amp; T&amp;Cs <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="news-card reveal" style="--i:1" onclick="openInfoModal('finance')" role="button" tabindex="0"
+          onkeydown="if(event.key==='Enter') openInfoModal('finance')">
+          <div class="img-wrap"><img
+              src="assets/images/Finance.jpg"
+              alt="Finance tips"></div>
+          <div class="body">
+            <div class="cat">Finance</div>
+            <h4>How Much Deposit Should You Put Down?</h4>
+            <p>Balancing your deposit and monthly instalment the smart way.</p>
+            <span class="read-more">Read the full guide &amp; T&amp;Cs <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="news-card reveal" style="--i:2" onclick="openInfoModal('trade-in')" role="button" tabindex="0"
+          onkeydown="if(event.key==='Enter') openInfoModal('trade-in')">
+          <div class="img-wrap"><img
+              src="assets/images/Trade-In.png"
+              alt="Trade-in advice"></div>
+          <div class="body">
+            <div class="cat">Trade-In</div>
+            <h4>Getting the Best Value for Your Trade-In</h4>
+            <p>Simple steps to prep your car before you bring it in for valuation.</p>
+            <span class="read-more">Read the full guide &amp; T&amp;Cs <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCE -->
+  <section class="section" id="finance" style="background:var(--surface);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Finance made simple</div>
+          <h2>Car Finance Calculator</h2>
+          <p>We work with South Africa's leading banks to get you approved quickly.</p>
+        </div>
+      </div>
+      <div class="finance-layout">
+        <div class="finance-card reveal">
+          <div class="bank-row">
+            <div class="bank-chip"><img src="assets/images/banks/absa.png" alt="ABSA"></div>
+            <div class="bank-chip"><img src="assets/images/banks/wesbank.png" alt="WesBank"></div>
+            <div class="bank-chip"><img src="assets/images/banks/standard-bank.png" alt="Standard Bank"></div>
+            <div class="bank-chip"><img src="assets/images/banks/nedbank-mfc.png" alt="Nedbank MFC"></div>
+          </div>
+          <ul class="finance-points">
+            <li><span class="chk"><i class="fa-solid fa-check"></i></span> Pre-approval in as little as 24 hours</li>
+            <li><span class="chk"><i class="fa-solid fa-check"></i></span> Flexible deposit and term options</li>
+            <li><span class="chk"><i class="fa-solid fa-check"></i></span> No obligation, no impact application</li>
+            <li><span class="chk"><i class="fa-solid fa-check"></i></span> Our team handles the paperwork for you</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Apply Online</a>
+        </div>
+        <div class="finance-card reveal">
+          <h3 style="font-family:'Poppins',sans-serif; margin-bottom:18px; font-size:1.05rem;">Monthly Repayment
+            Calculator</h3>
+          <div class="calc-field"><label>Vehicle Price <b id="priceOut">R250,000</b></label><input type="range"
+              id="calcPrice" min="50000" max="1000000" step="5000" value="250000"></div>
+          <div class="calc-field"><label>Deposit <b id="depositOut">R25,000</b></label><input type="range"
+              id="calcDeposit" min="0" max="500000" step="5000" value="25000"></div>
+          <div class="calc-field"><label>Interest Rate <b id="rateOut">12.5%</b></label><input type="range"
+              id="calcRate" min="8" max="22" step="0.5" value="12.5"></div>
+          <div class="calc-field"><label>Term <b id="termOut">60 months</b></label><input type="range" id="calcTerm"
+              min="12" max="72" step="6" value="60"></div>
+          <div class="calc-result">
+            <div class="amount" id="calcResult">R4,980<span style="font-size:.95rem;">/mo</span></div>
+            <div class="note">Estimate only — final rate subject to bank approval</div>
+          </div>
+          <a href="#" class="btn btn-navy btn-block">Apply for This Vehicle</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Customer reviews</div>
+          <h2>What Our Customers Say</h2>
+        </div>
+      </div>
+      <div class="rating-banner reveal">
+        <div class="score">4.3<span style="font-size:1.1rem;">/5</span></div>
+        <div>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+          <div style="font-size:.82rem; color:var(--text-soft); margin-top:4px;">Based on Google Reviews from our
+            Bloemfontein customers</div>
+        </div>
+      </div>
+      <div class="review-grid stagger">
+        <div class="review-card reveal" style="--i:0">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Good selection of cars and great customer service before and after purchase."</p>
+          <div class="who">
+            <div class="av">T</div> Thabo M.
+          </div>
+        </div>
+        <div class="review-card reveal" style="--i:1">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Bought my first car here. Best thing I've ever done."</p>
+          <div class="who">
+            <div class="av">L</div> Lerato K.
+          </div>
+        </div>
+        <div class="review-card reveal" style="--i:2">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The cars are beautiful."</p>
+          <div class="who">
+            <div class="av">J</div> Johan V.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo"
+          style="margin-bottom:14px; padding:10px 16px; border-radius:8px; display:inline-flex; width:fit-content;">
+          <img src="assets/images/logo.png" alt="N&N Motors logo" style="height:38px;">
+        </div>
+        <p>Quality used vehicles you can trust. Serving Bloemfontein for over 10 years.</p>
+        <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a
+            href="https://wa.me/27824990717" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div>
+      </div>
+      <div>
+        <h4>Popular Makes</h4>
+        <ul>
+          <li><a href="vehicles.html">Toyota</a></li>
+          <li><a href="vehicles.html">Volkswagen</a></li>
+          <li><a href="vehicles.html">Ford</a></li>
+          <li><a href="vehicles.html">Hyundai</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Models</h4>
+        <ul>
+          <li><a href="vehicles.html">Corolla Quest</a></li>
+          <li><a href="vehicles.html">Polo TSI</a></li>
+          <li><a href="vehicles.html">Ranger 2.2</a></li>
+          <li><a href="vehicles.html">Grand i10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#finance">Finance</a></li>
+          <li><a href="sell.html">Sell Your Car</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Business Information</h4>
+        <p>67 Oliver Tambo Street<br>Bloemfontein, South Africa<br>051 448 9580<br>info@nnmotors.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 N&amp;N Motors. All Rights Reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/27824990717" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <div class="sticky-cta-mobile">
+    <a href="tel:0514489580" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <a href="#finance" class="btn btn-primary btn-block">Get Finance</a>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/vehicles-data.js"></script>
+  <script>
+    setupHeroSearch('heroSearchForm', VEHICLES);
+    setupFeaturedSort('vehicleGrid', VEHICLES.slice(0, 9));
+  </script>
+</body>
+
+</html>
