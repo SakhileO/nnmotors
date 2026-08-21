@@ -527,7 +527,7 @@
 
   /* Search dock — floats over the hero's bottom edge */
   .search-wrap {
-    margin-top: -35px;
+    margin-top: -25px;
     margin-bottom: 25px;
     position: relative;
     z-index: 5;
